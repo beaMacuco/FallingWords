@@ -10,6 +10,7 @@
 		0E67B024BC41645D4E35476D /* Pods_FallingWords.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D84DDE38CD474E6DE0BEE9 /* Pods_FallingWords.framework */; };
 		38127C4ECA3521095906225D /* Pods_FallingWordsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12455CCB372EB1CDD3098E9E /* Pods_FallingWordsTests.framework */; };
 		494EE325D54F51D8E73463EE /* Pods_FallingWordsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4722C0B3D000B6F087F8C980 /* Pods_FallingWordsUITests.framework */; };
+		4F5FB606211C857300D0D2D4 /* Button+FontIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FB605211C857300D0D2D4 /* Button+FontIcon.swift */; };
 		4FF59073211C314200A084BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF59072211C314200A084BD /* AppDelegate.swift */; };
 		4FF59075211C314200A084BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF59074211C314200A084BD /* ViewController.swift */; };
 		4FF59078211C314200A084BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF59076211C314200A084BD /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		316693A7D18963E511A24E0A /* Pods-FallingWords.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallingWords.release.xcconfig"; path = "Pods/Target Support Files/Pods-FallingWords/Pods-FallingWords.release.xcconfig"; sourceTree = "<group>"; };
 		3DFBC83826860A4DA869862C /* Pods-FallingWords.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallingWords.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FallingWords/Pods-FallingWords.debug.xcconfig"; sourceTree = "<group>"; };
 		4722C0B3D000B6F087F8C980 /* Pods_FallingWordsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FallingWordsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F5FB605211C857300D0D2D4 /* Button+FontIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Button+FontIcon.swift"; path = "Extensions/Button+FontIcon.swift"; sourceTree = "<group>"; };
 		4FF5906F211C314200A084BD /* FallingWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FallingWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FF59072211C314200A084BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FF59074211C314200A084BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				4FF59079211C314300A084BD /* Assets.xcassets */,
 				4FF5907B211C314300A084BD /* LaunchScreen.storyboard */,
 				4FF5907E211C314300A084BD /* Info.plist */,
+				4F5FB605211C857300D0D2D4 /* Button+FontIcon.swift */,
 			);
 			path = FallingWords;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FF59075211C314200A084BD /* ViewController.swift in Sources */,
+				4F5FB606211C857300D0D2D4 /* Button+FontIcon.swift in Sources */,
 				4FF59073211C314200A084BD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

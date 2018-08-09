@@ -7,9 +7,10 @@
 //
 
 import UIKit
+import FontAwesome_swift
 
 class ViewController: UIViewController {
-
+    
     private var timer = Timer()
     
     private var seconds = 20 {
@@ -20,10 +21,19 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var word: UILabel!
     @IBOutlet weak var counter: UILabel!
-    @IBOutlet weak var incorrectTranslationButton: UIButton!
-    @IBOutlet weak var correctTranslationButton: UIButton!
-    @IBOutlet weak var translation: UILabel!
+    @IBOutlet weak var incorrectTranslationButton: UIButton! {
+        didSet {
+            incorrectTranslationButton.setTitleWithFontIcon(icon: .timesCircle, size: 60)
+        }
+    }
     
+    @IBOutlet weak var correctTranslationButton: UIButton! {
+        didSet {
+            correctTranslationButton.setTitleWithFontIcon(icon: .checkCircle, size: 60)
+        }
+    }
+    
+    @IBOutlet weak var translation: UILabel!
     @IBAction func userPressedIncorrectTranslation(_ sender: Any){
     }
     
@@ -34,7 +44,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         startGameRound()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -44,7 +54,7 @@ class ViewController: UIViewController {
         runTimer()
         animateWord()
     }
-
+    
     private func runTimer(){
         timer = Timer.scheduledTimer(timeInterval:1,
                                      target: self,
@@ -61,13 +71,13 @@ class ViewController: UIViewController {
         let height = translation.frame.height
         
         translation.frame = CGRect(x: x, y: y, width: width, height: height)
-        translation.alpha = 0
-
+        translation.alpha = 1
+        
         UIView.animate(withDuration: 1, delay: 0, options: .allowUserInteraction, animations: {
             self.translation.alpha = 1
         })
         
-        UIView.animate(withDuration: Double(seconds), delay: -1, options: .allowUserInteraction, animations: {
+        UIView.animate(withDuration: Double(seconds), delay: -1, animations: {
             y = self.view.frame.height - height
             self.translation.frame = CGRect(x: x, y: y, width: width, height: height)
         })
