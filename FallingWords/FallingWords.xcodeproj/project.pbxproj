@@ -11,6 +11,10 @@
 		38127C4ECA3521095906225D /* Pods_FallingWordsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12455CCB372EB1CDD3098E9E /* Pods_FallingWordsTests.framework */; };
 		494EE325D54F51D8E73463EE /* Pods_FallingWordsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4722C0B3D000B6F087F8C980 /* Pods_FallingWordsUITests.framework */; };
 		4F5FB606211C857300D0D2D4 /* Button+FontIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FB605211C857300D0D2D4 /* Button+FontIcon.swift */; };
+		4F5FB609211C995800D0D2D4 /* WordsSampleRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F5FB608211C995800D0D2D4 /* WordsSampleRetriever.swift */; };
+		4F5FB60B211C997900D0D2D4 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F5FB60A211C997900D0D2D4 /* words.json */; };
+		4F8D60C5211CA30100B50829 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8D60C4211CA30100B50829 /* Word.swift */; };
+		4F8D60C7211CB19200B50829 /* UILabel+Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8D60C6211CB19200B50829 /* UILabel+Fade.swift */; };
 		4FF59073211C314200A084BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF59072211C314200A084BD /* AppDelegate.swift */; };
 		4FF59075211C314200A084BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF59074211C314200A084BD /* ViewController.swift */; };
 		4FF59078211C314200A084BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF59076211C314200A084BD /* Main.storyboard */; };
@@ -44,7 +48,11 @@
 		316693A7D18963E511A24E0A /* Pods-FallingWords.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallingWords.release.xcconfig"; path = "Pods/Target Support Files/Pods-FallingWords/Pods-FallingWords.release.xcconfig"; sourceTree = "<group>"; };
 		3DFBC83826860A4DA869862C /* Pods-FallingWords.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallingWords.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FallingWords/Pods-FallingWords.debug.xcconfig"; sourceTree = "<group>"; };
 		4722C0B3D000B6F087F8C980 /* Pods_FallingWordsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FallingWordsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F5FB605211C857300D0D2D4 /* Button+FontIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Button+FontIcon.swift"; path = "Extensions/Button+FontIcon.swift"; sourceTree = "<group>"; };
+		4F5FB605211C857300D0D2D4 /* Button+FontIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+FontIcon.swift"; sourceTree = "<group>"; };
+		4F5FB608211C995800D0D2D4 /* WordsSampleRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordsSampleRetriever.swift; sourceTree = "<group>"; };
+		4F5FB60A211C997900D0D2D4 /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
+		4F8D60C4211CA30100B50829 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		4F8D60C6211CB19200B50829 /* UILabel+Fade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Fade.swift"; sourceTree = "<group>"; };
 		4FF5906F211C314200A084BD /* FallingWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FallingWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FF59072211C314200A084BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FF59074211C314200A084BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +109,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4F5FB607211C98A400D0D2D4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4F5FB605211C857300D0D2D4 /* Button+FontIcon.swift */,
+				4F8D60C6211CB19200B50829 /* UILabel+Fade.swift */,
+			);
+			name = Extensions;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		4F8D60C3211CA29400B50829 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4F8D60C4211CA30100B50829 /* Word.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		4FF59066211C314200A084BD = {
 			isa = PBXGroup;
 			children = (
@@ -126,13 +152,16 @@
 		4FF59071211C314200A084BD /* FallingWords */ = {
 			isa = PBXGroup;
 			children = (
+				4F8D60C3211CA29400B50829 /* Models */,
+				4F5FB60A211C997900D0D2D4 /* words.json */,
 				4FF59072211C314200A084BD /* AppDelegate.swift */,
 				4FF59074211C314200A084BD /* ViewController.swift */,
+				4F5FB608211C995800D0D2D4 /* WordsSampleRetriever.swift */,
 				4FF59076211C314200A084BD /* Main.storyboard */,
 				4FF59079211C314300A084BD /* Assets.xcassets */,
 				4FF5907B211C314300A084BD /* LaunchScreen.storyboard */,
 				4FF5907E211C314300A084BD /* Info.plist */,
-				4F5FB605211C857300D0D2D4 /* Button+FontIcon.swift */,
+				4F5FB607211C98A400D0D2D4 /* Extensions */,
 			);
 			path = FallingWords;
 			sourceTree = "<group>";
@@ -277,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FF5907D211C314300A084BD /* LaunchScreen.storyboard in Resources */,
+				4F5FB60B211C997900D0D2D4 /* words.json in Resources */,
 				4FF5907A211C314300A084BD /* Assets.xcassets in Resources */,
 				4FF59078211C314200A084BD /* Main.storyboard in Resources */,
 			);
@@ -379,6 +409,9 @@
 			files = (
 				4FF59075211C314200A084BD /* ViewController.swift in Sources */,
 				4F5FB606211C857300D0D2D4 /* Button+FontIcon.swift in Sources */,
+				4F8D60C5211CA30100B50829 /* Word.swift in Sources */,
+				4F5FB609211C995800D0D2D4 /* WordsSampleRetriever.swift in Sources */,
+				4F8D60C7211CB19200B50829 /* UILabel+Fade.swift in Sources */,
 				4FF59073211C314200A084BD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

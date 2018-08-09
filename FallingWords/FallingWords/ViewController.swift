@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var word: UILabel!
     @IBOutlet weak var counter: UILabel!
+    
     @IBOutlet weak var incorrectTranslationButton: UIButton! {
         didSet {
             incorrectTranslationButton.setTitleWithFontIcon(icon: .timesCircle, size: 60)
@@ -33,7 +34,12 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBOutlet weak var translation: UILabel!
+    @IBOutlet weak var translation: UILabel! {
+        didSet {
+            translation.alpha = 0
+        }
+    }
+    
     @IBAction func userPressedIncorrectTranslation(_ sender: Any){
     }
     
@@ -52,7 +58,7 @@ class ViewController: UIViewController {
     
     private func startGameRound(){
         runTimer()
-        animateWord()
+        animatePossibleTranslationAcrossScreen()
     }
     
     private func runTimer(){
@@ -63,7 +69,7 @@ class ViewController: UIViewController {
                                      repeats: true)
     }
     
-    private func animateWord(){
+    private func animatePossibleTranslationAcrossScreen(){
         
         let x = view.frame.width/2 - translation.frame.height
         var y : CGFloat = 0
@@ -71,11 +77,7 @@ class ViewController: UIViewController {
         let height = translation.frame.height
         
         translation.frame = CGRect(x: x, y: y, width: width, height: height)
-        translation.alpha = 1
-        
-        UIView.animate(withDuration: 1, delay: 0, options: .allowUserInteraction, animations: {
-            self.translation.alpha = 1
-        })
+        fadeInTranslationOptionLabel()
         
         UIView.animate(withDuration: Double(seconds), delay: -1, animations: {
             y = self.view.frame.height - height
@@ -85,17 +87,23 @@ class ViewController: UIViewController {
     
     @objc private func updateCounter(){
         seconds -= 1
-        
+        updateUserInterface()
+    }
+    
+    private func updateUserInterface() {
         if(seconds == 0) {
             resetTimer()
+        } else if(seconds == 1) {
+            fadeOutTranslationOptionLabel()
         }
-        
-        if(seconds == 1) {
-            //takes last second to fade
-            UIView.animate(withDuration: 1, delay: 0, options: .allowUserInteraction, animations: {
-                self.translation.alpha = 0
-            })
-        }
+    }
+    
+    private func fadeInTranslationOptionLabel(){
+        translation.fadeInWithDuration(duration: 1.0)
+    }
+    
+    private func fadeOutTranslationOptionLabel(){
+        translation.fadeOutWithDuration(duration: 1.0)
     }
     
     private func resetTimer(){
