@@ -1,0 +1,16 @@
+PODS:
+  - FontAwesome.swift (1.4.3)
+
+DEPENDENCIES:
+  - FontAwesome.swift
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FontAwesome.swift
+
+SPEC CHECKSUMS:
+  FontAwesome.swift: 4b9ba1e1f3418a626f3ab67b230856ab6eb4860f
+
+PODFILE CHECKSUM: 2faeca9615309d34e6c5f185d9cf4df2911f0f41
+
+COCOAPODS: 1.5.3
