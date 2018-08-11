@@ -13,8 +13,6 @@ import Foundation
 class Round {
     
     private let roundDuration: Int
-    private let secondsLeftKey = "secondsLeft"
-    private let roundDurationKey = "roundDuration"
     private var countDown: Int
     private var timer = Timer()
     
@@ -35,11 +33,16 @@ class Round {
     
     private func startRound(){
         notifyRoundStart()
+        
         runTimer()
     }
     
     private func notifyRoundStart(){
-        NotificationCenter.default.post(name: .roundStarted, object: nil, userInfo:[roundDurationKey: roundDuration])
+        NotificationCenter.default.post(name: .roundStarted, object: nil, userInfo: [NotificationKeys.roundDurationKey: roundDuration])
+    }
+    
+    private func postCurrentWord() {
+        NotificationCenter.default.post(name: .possibleTranslation, object: nil, userInfo: [NotificationKeys.possibleTranslationKey: possibleTranslation])
     }
     
     private func runTimer(){
@@ -69,7 +72,7 @@ class Round {
     }
     
     private func notifyCurrentCountDown(){
-        NotificationCenter.default.post(name: .countDown, object: nil, userInfo: [secondsLeftKey : countDown])
+        NotificationCenter.default.post(name: .countDown, object: nil, userInfo: [NotificationKeys.secondsLeftKey : countDown])
     }
     
     private func endRound(){
