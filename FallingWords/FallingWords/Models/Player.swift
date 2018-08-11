@@ -9,11 +9,6 @@
 import Foundation
 
 class Player {
-    let id: Int
-    let score: Int
     
-    init(id: Int, score: Int){
-        self.id = id
-        self.score = score
-    }
+    var score: Int = 0
 }

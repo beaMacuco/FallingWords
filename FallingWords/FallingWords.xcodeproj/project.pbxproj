@@ -42,6 +42,9 @@
 		4FFAAA69211F7A5200731D72 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFAAA68211F7A5200731D72 /* Game.swift */; };
 		4FFAAA6A211F7A5200731D72 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFAAA68211F7A5200731D72 /* Game.swift */; };
 		4FFAAA6D211F7FA900731D72 /* GameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFAAA6B211F7FA900731D72 /* GameTests.swift */; };
+		4FFAAA6F211F843200731D72 /* ScoreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFAAA6E211F843200731D72 /* ScoreProvider.swift */; };
+		4FFAAA70211F843200731D72 /* ScoreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFAAA6E211F843200731D72 /* ScoreProvider.swift */; };
+		4FFAAA73211F86DD00731D72 /* ScoreProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFAAA71211F86DD00731D72 /* ScoreProviderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +100,8 @@
 		4FFAAA60211F6E9B00731D72 /* NotificationKeysEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationKeysEnum.swift; sourceTree = "<group>"; };
 		4FFAAA68211F7A5200731D72 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		4FFAAA6B211F7FA900731D72 /* GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
+		4FFAAA6E211F843200731D72 /* ScoreProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreProvider.swift; sourceTree = "<group>"; };
+		4FFAAA71211F86DD00731D72 /* ScoreProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreProviderTests.swift; sourceTree = "<group>"; };
 		5135ABE5CA7EC2731B6C17F6 /* Pods-FallingWordsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallingWordsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FallingWordsUITests/Pods-FallingWordsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C85EB01D401A55E5A462A844 /* Pods-FallingWordsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallingWordsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FallingWordsTests/Pods-FallingWordsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD72627E50CDA71C0095BEB2 /* Pods-FallingWordsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallingWordsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FallingWordsUITests/Pods-FallingWordsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +153,7 @@
 				4FFAAA40211F2CE800731D72 /* Round.swift */,
 				4FFAAA4C211F3CBE00731D72 /* RoundProvider.swift */,
 				4FFAAA68211F7A5200731D72 /* Game.swift */,
+				4FFAAA6E211F843200731D72 /* ScoreProvider.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -201,6 +207,7 @@
 				4FFAA99F211F186900731D72 /* WordTests.swift */,
 				4FFAAA42211F2D9400731D72 /* RoundTests.swift */,
 				4FFAAA5D211F6A6100731D72 /* GenerateWordCollection.swift */,
+				4FFAAA71211F86DD00731D72 /* ScoreProviderTests.swift */,
 			);
 			path = FallingWordsTests;
 			sourceTree = "<group>";
@@ -474,6 +481,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FFAAA5B211F698600731D72 /* WordParser.swift in Sources */,
+				4FFAAA6F211F843200731D72 /* ScoreProvider.swift in Sources */,
 				4FF59075211C314200A084BD /* ViewController.swift in Sources */,
 				4FFAAA61211F6E9B00731D72 /* NotificationKeysEnum.swift in Sources */,
 				4FFAAA4D211F3CBE00731D72 /* RoundProvider.swift in Sources */,
@@ -501,10 +509,12 @@
 				4FFAAA65211F727700731D72 /* Player.swift in Sources */,
 				4FFAAA6D211F7FA900731D72 /* GameTests.swift in Sources */,
 				4FFAA9A0211F186900731D72 /* WordTests.swift in Sources */,
+				4FFAAA73211F86DD00731D72 /* ScoreProviderTests.swift in Sources */,
 				4FFAAA5C211F69EC00731D72 /* WordParser.swift in Sources */,
 				4FFAAA55211F3E9600731D72 /* RoundProvider.swift in Sources */,
 				4FFAAA62211F6FCF00731D72 /* NotificationKeysEnum.swift in Sources */,
 				4FFAAA63211F724B00731D72 /* Notification+Name.swift in Sources */,
+				4FFAAA70211F843200731D72 /* ScoreProvider.swift in Sources */,
 				4FFAAA44211F2DC400731D72 /* Round.swift in Sources */,
 				4FFAA9A1211F188B00731D72 /* Word.swift in Sources */,
 			);
