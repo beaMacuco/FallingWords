@@ -14,4 +14,5 @@ extension Notification.Name {
     static let roundStarted = Notification.Name("roundStarted")
     static let gameIsOver = Notification.Name("gameIsOver")
     static let possibleTranslation = Notification.Name("possibleTranslation")
+    static let playerResult = Notification.Name("playerResult")
 }

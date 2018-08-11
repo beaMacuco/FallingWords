@@ -17,16 +17,23 @@ class GameTests: XCTestCase {
 
     private func testGameCreatesRounds() {
         expectation(forNotification: .roundStarted, object: nil, handler: nil)
-        let roundProvider = RoundProvider(words: parsedWords, amountOfRounds: 2, roundDuration: 10)
-        let _ = Game(amountOfRounds: 2, player: Player(), roundProvider: roundProvider)
+        let roundProvider = RoundProvider(words: parsedWords, amountOfRounds: 2, roundDuration: 10, scoreProvidable: ScoreProvider())
+        let _ = Game(amountOfRounds: 2, player: Player(), roundCreatable: roundProvider)
         waitForExpectations(timeout: 0.5, handler: nil)
     }
 
     private func testGameIsOver() {
         expectation(forNotification: .gameIsOver, object: nil, handler: nil)
-        let roundProvider = RoundProvider(words: parsedWords, amountOfRounds: 2, roundDuration: 10)
-        let _ = Game(amountOfRounds: 2, player: Player(), roundProvider: roundProvider)
+        let roundProvider = RoundProvider(words: parsedWords, amountOfRounds: 2, roundDuration: 10, scoreProvidable: ScoreProvider())
+        let _ = Game(amountOfRounds: 2, player: Player(), roundCreatable: roundProvider)
         waitForExpectations(timeout: 2, handler: nil)
     }
     
+    private func testPlayerChoiceMadeEndsRound() {
+        expectation(forNotification: .roundOver, object: nil, handler: nil)
+        let roundProvider = RoundProvider(words: parsedWords, amountOfRounds: 2, roundDuration: 10, scoreProvidable: ScoreProvider())
+        let game = Game(amountOfRounds: 2, player: Player(), roundCreatable: roundProvider)
+        game.handlePlayerChoiceForRound(chosenTranslation: true)
+        waitForExpectations(timeout: 0.5, handler: nil)
+    }
 }

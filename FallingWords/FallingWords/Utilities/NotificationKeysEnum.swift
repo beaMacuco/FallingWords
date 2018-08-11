@@ -11,6 +11,7 @@ import Foundation
 enum NotificationKeys: String, CodingKey {
     
     case valuesKey = "values"
+    case resultKey = "result"
     case roundDurationKey = "roundDuration"
     case secondsLeftKey = "secondsLeft"
     case wordsKey = "words"

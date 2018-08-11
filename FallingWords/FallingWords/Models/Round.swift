@@ -8,12 +8,11 @@
 
 import Foundation
 
-import Foundation
-
 class Round {
     
     private let roundDuration: Int
     private var countDown: Int
+    private let scoreProvidable: ScoreProvidable
     private var timer = Timer()
     
     let possibleTranslation: Word
@@ -21,19 +20,20 @@ class Round {
     
     init(possibleTranslation: Word,
          isTranslation: Bool,
-         roundDuration: Int) {
+         roundDuration: Int,
+         scoreProvidable: ScoreProvidable) {
         
         self.possibleTranslation = possibleTranslation
         self.isTranslation = isTranslation
         self.roundDuration = roundDuration
         self.countDown = roundDuration
+        self.scoreProvidable = scoreProvidable
         
         startRound()
     }
     
     private func startRound(){
         notifyRoundStart()
-        
         runTimer()
     }
     
@@ -83,5 +83,15 @@ class Round {
     private func resetRound(){
         timer.invalidate()
         countDown = roundDuration
+    }
+
+    func handlePlayerChoice(chosenTranslation: Bool) {
+        let correctChoice = scoreProvidable.shouldAddPoint(isTranslation: isTranslation, choseIsTranslation: chosenTranslation)
+        notifyPlayerResult(correctChoice: correctChoice)
+        notifyRoundIsOver()
+    }
+    
+    private func notifyPlayerResult(correctChoice: Bool) {
+        NotificationCenter.default.post(name: .playerResult, object: nil, userInfo: [NotificationKeys.resultKey: correctChoice])
     }
 }

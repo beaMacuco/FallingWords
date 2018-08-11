@@ -13,15 +13,17 @@ class RoundProvider : RoundCreatable {
     private var words: [Word]
     private let amountOfRounds: Int
     private let roundDuration: Int
+    private let scoreProvidable: ScoreProvidable
     
     private lazy var isTranslationArray: [Bool] = {
         return createRandomIsTranslationArray()
     }()
     
-    init(words: [Word], amountOfRounds: Int, roundDuration: Int){
+    init(words: [Word], amountOfRounds: Int, roundDuration: Int, scoreProvidable: ScoreProvidable){
         self.words = words
         self.amountOfRounds = amountOfRounds
         self.roundDuration = roundDuration
+        self.scoreProvidable = scoreProvidable
     }
     
     func createRound() -> Round {
@@ -30,7 +32,8 @@ class RoundProvider : RoundCreatable {
         
         return Round(possibleTranslation: possibleTranslation,
                      isTranslation: isTraslation,
-                     roundDuration: self.roundDuration)
+                     roundDuration: self.roundDuration,
+                     scoreProvidable: self.scoreProvidable)
     }
     
     private func getPossibleTranslation(isTranslation: Bool ) -> Word {

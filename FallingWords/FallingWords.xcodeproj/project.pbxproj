@@ -45,6 +45,8 @@
 		4FFAAA6F211F843200731D72 /* ScoreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFAAA6E211F843200731D72 /* ScoreProvider.swift */; };
 		4FFAAA70211F843200731D72 /* ScoreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFAAA6E211F843200731D72 /* ScoreProvider.swift */; };
 		4FFAAA73211F86DD00731D72 /* ScoreProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFAAA71211F86DD00731D72 /* ScoreProviderTests.swift */; };
+		4FFAAA75211F8B1600731D72 /* ScoreProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFAAA74211F8B1600731D72 /* ScoreProvidable.swift */; };
+		4FFAAA76211F8B1600731D72 /* ScoreProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFAAA74211F8B1600731D72 /* ScoreProvidable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +104,7 @@
 		4FFAAA6B211F7FA900731D72 /* GameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTests.swift; sourceTree = "<group>"; };
 		4FFAAA6E211F843200731D72 /* ScoreProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreProvider.swift; sourceTree = "<group>"; };
 		4FFAAA71211F86DD00731D72 /* ScoreProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreProviderTests.swift; sourceTree = "<group>"; };
+		4FFAAA74211F8B1600731D72 /* ScoreProvidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreProvidable.swift; sourceTree = "<group>"; };
 		5135ABE5CA7EC2731B6C17F6 /* Pods-FallingWordsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallingWordsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FallingWordsUITests/Pods-FallingWordsUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C85EB01D401A55E5A462A844 /* Pods-FallingWordsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallingWordsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FallingWordsTests/Pods-FallingWordsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD72627E50CDA71C0095BEB2 /* Pods-FallingWordsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallingWordsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FallingWordsUITests/Pods-FallingWordsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -244,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				4FFAAA4E211F3CF600731D72 /* RoundCreatable.swift */,
+				4FFAAA74211F8B1600731D72 /* ScoreProvidable.swift */,
 			);
 			name = Protocols;
 			path = "New Group";
@@ -484,6 +488,7 @@
 				4FFAAA6F211F843200731D72 /* ScoreProvider.swift in Sources */,
 				4FF59075211C314200A084BD /* ViewController.swift in Sources */,
 				4FFAAA61211F6E9B00731D72 /* NotificationKeysEnum.swift in Sources */,
+				4FFAAA75211F8B1600731D72 /* ScoreProvidable.swift in Sources */,
 				4FFAAA4D211F3CBE00731D72 /* RoundProvider.swift in Sources */,
 				4FFAAA4B211F3C3600731D72 /* WordsSampleRetriever.swift in Sources */,
 				4FFAAA4F211F3CF600731D72 /* RoundCreatable.swift in Sources */,
@@ -506,6 +511,7 @@
 				4FFAAA43211F2D9400731D72 /* RoundTests.swift in Sources */,
 				4FFAAA6A211F7A5200731D72 /* Game.swift in Sources */,
 				4FFAAA5E211F6A6100731D72 /* GenerateWordCollection.swift in Sources */,
+				4FFAAA76211F8B1600731D72 /* ScoreProvidable.swift in Sources */,
 				4FFAAA65211F727700731D72 /* Player.swift in Sources */,
 				4FFAAA6D211F7FA900731D72 /* GameTests.swift in Sources */,
 				4FFAA9A0211F186900731D72 /* WordTests.swift in Sources */,

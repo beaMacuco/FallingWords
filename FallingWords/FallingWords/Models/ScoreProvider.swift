@@ -8,7 +8,7 @@
 
 import Foundation
 
-class ScoreProvider {
+class ScoreProvider : ScoreProvidable {
     
     func shouldAddPoint(isTranslation: Bool, choseIsTranslation: Bool) -> Bool {
         return choseIsTranslation == isTranslation

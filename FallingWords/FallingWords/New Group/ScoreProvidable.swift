@@ -1,5 +1,5 @@
 //
-//  Player.swift
+//  ScoreProvidable.swift
 //  FallingWords
 //
 //  Created by Beatriz on 11.08.18.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-class Player {
-    var score: Int = 0
+protocol ScoreProvidable {
+    func shouldAddPoint(isTranslation: Bool, choseIsTranslation: Bool) -> Bool
 }
