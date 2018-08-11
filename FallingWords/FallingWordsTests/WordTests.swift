@@ -11,17 +11,9 @@ import Foundation
 import XCTest
 @testable import FallingWords
 
-class WordsTest: XCTestCase {
+class WordTests: XCTestCase {
     
     let words = [["text_eng":"primary school", "text_spa":"escuela primaria"], ["text_eng":"teacher", "text_spa":"profesor / profesora"],["text_eng":"pupil","text_spa":"alumno / alumna"]]
-    
-    override func setUp() {
-        super.setUp()
-    }
-    
-    override func tearDown() {
-        super.tearDown()
-    }
     
     func testEnglishTextGetsSetCorrectly() {
         let parsedWords = parseWords()
