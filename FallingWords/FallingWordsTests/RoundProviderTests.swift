@@ -29,22 +29,6 @@ class RoundProviderTest: XCTestCase {
         
         waitForExpectations(timeout: Double(expected), handler: nil)
     }
-    
-    func testRoundProviderSetsAmountOfRoundsCorrectly(){
-        
-    }
-    
-    func testRoundProviderSetsPossibleWordCorrectly(){
-        expectation(forNotification: .possibleTranslation, object: nil, handler: { (notification) -> Bool in
-            let result = notification.userInfo![NotificationKeys.possibleTranslationKey] as? Int
-            
-            return result == expected
-        })
-        
-        let roundProvider = RoundProvider(words: parsedWords, amountOfRounds: 3, roundDuration: 10)
-        let _ = roundProvider.createRound()
-        
-        waitForExpectations(timeout: 2, handler: nil)
-    }
+
 }
 
