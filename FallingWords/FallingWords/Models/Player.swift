@@ -9,7 +9,6 @@
 import Foundation
 
 class Player {
-    
     let id: Int
     let score: Int
     
