@@ -16,4 +16,5 @@ enum NotificationKeys: String, CodingKey {
     case secondsLeftKey = "secondsLeft"
     case wordsKey = "words"
     case possibleTranslationKey = "possibleTranslation"
+    case resultMessageKey = "resultMessage"
 }

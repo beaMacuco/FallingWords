@@ -26,8 +26,9 @@ class RoundProvider : RoundCreatable {
         self.scoreProvidable = scoreProvidable
     }
     
-    func createRound() -> Round {
-        let isTraslation = isTranslationArray.removeLast()
+    func createRound(roundCount: Int) -> Round {
+        let index = roundCount - 1
+        let isTraslation = isTranslationArray[index]
         let possibleTranslation = getPossibleTranslation(isTranslation: isTraslation)
         
         return Round(possibleTranslation: possibleTranslation,
@@ -35,11 +36,11 @@ class RoundProvider : RoundCreatable {
                      roundDuration: self.roundDuration,
                      scoreProvidable: self.scoreProvidable)
     }
-    
+
     private func getPossibleTranslation(isTranslation: Bool ) -> Word {
         var possibleTranlation = removeRandomItemFromArray()
         
-        if(!isTranslation) {
+        if isTranslation == false {
             let randomSample = removeRandomItemFromArray()
             possibleTranlation = Word(wordEnglish: possibleTranlation.wordEnglish, wordSpanish: randomSample.wordSpanish)
         }
@@ -50,7 +51,7 @@ class RoundProvider : RoundCreatable {
     private func createRandomIsTranslationArray() -> [Bool] {
         var isTranslationArray = [Bool]()
         
-        for _ in 0...amountOfRounds {
+        for _ in 1...amountOfRounds {
             let randomBool = arc4random_uniform(2) == 1
             isTranslationArray.append(randomBool)
         }

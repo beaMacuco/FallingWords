@@ -10,8 +10,8 @@ import Foundation
 
 class GameInitializer : GameCreatable {
     
-    private let amountOfRounds = 5
-    private let roundDuration = 20
+    private let amountOfRounds = 4
+    private let roundDuration = 10
     
     func createGame(result: @escaping(Game) -> Void){
         let player = Player()
@@ -19,7 +19,10 @@ class GameInitializer : GameCreatable {
         
         wordRetriever.fetchItems { (words) in
             let roundProvider = RoundProvider(words: words, amountOfRounds:self.amountOfRounds, roundDuration: self.roundDuration, scoreProvidable: ScoreProvider())
-            let game = Game(amountOfRounds: self.amountOfRounds, player: player, roundCreatable: roundProvider)
+            
+            let game = Game(amountOfRounds: self.amountOfRounds,
+                            player: player,
+                            roundCreatable: roundProvider, gameResultProvidable: GameResultProvider())
             
             result(game)
         }

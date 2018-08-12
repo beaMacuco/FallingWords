@@ -10,10 +10,17 @@
 		0E67B024BC41645D4E35476D /* Pods_FallingWords.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D84DDE38CD474E6DE0BEE9 /* Pods_FallingWords.framework */; };
 		38127C4ECA3521095906225D /* Pods_FallingWordsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12455CCB372EB1CDD3098E9E /* Pods_FallingWordsTests.framework */; };
 		494EE325D54F51D8E73463EE /* Pods_FallingWordsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4722C0B3D000B6F087F8C980 /* Pods_FallingWordsUITests.framework */; };
+		4F4319AC21203A70004DD923 /* GameEndView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4F4319AB21203A70004DD923 /* GameEndView.xib */; };
+		4F4319AF21203B17004DD923 /* EndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4319AE21203B17004DD923 /* EndGameViewController.swift */; };
+		4F4319B321204419004DD923 /* GameResultProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4319B221204419004DD923 /* GameResultProvidable.swift */; };
+		4F4319B521204465004DD923 /* GameResultProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4319B421204465004DD923 /* GameResultProvider.swift */; };
+		4F4319B621205040004DD923 /* GameResultProvidable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4319B221204419004DD923 /* GameResultProvidable.swift */; };
+		4F4319B721205043004DD923 /* GameResultProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4319B421204465004DD923 /* GameResultProvider.swift */; };
+		4F4319B8212050AD004DD923 /* WordsSampleRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FFAAA4A211F3C3600731D72 /* WordsSampleRetriever.swift */; };
 		4F5FB60B211C997900D0D2D4 /* words.json in Resources */ = {isa = PBXBuildFile; fileRef = 4F5FB60A211C997900D0D2D4 /* words.json */; };
 		4F8D60C5211CA30100B50829 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F8D60C4211CA30100B50829 /* Word.swift */; };
 		4FF59073211C314200A084BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF59072211C314200A084BD /* AppDelegate.swift */; };
-		4FF59075211C314200A084BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF59074211C314200A084BD /* ViewController.swift */; };
+		4FF59075211C314200A084BD /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF59074211C314200A084BD /* GameViewController.swift */; };
 		4FF59078211C314200A084BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF59076211C314200A084BD /* Main.storyboard */; };
 		4FF5907A211C314300A084BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FF59079211C314300A084BD /* Assets.xcassets */; };
 		4FF5907D211C314300A084BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FF5907B211C314300A084BD /* LaunchScreen.storyboard */; };
@@ -77,11 +84,15 @@
 		316693A7D18963E511A24E0A /* Pods-FallingWords.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallingWords.release.xcconfig"; path = "Pods/Target Support Files/Pods-FallingWords/Pods-FallingWords.release.xcconfig"; sourceTree = "<group>"; };
 		3DFBC83826860A4DA869862C /* Pods-FallingWords.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FallingWords.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FallingWords/Pods-FallingWords.debug.xcconfig"; sourceTree = "<group>"; };
 		4722C0B3D000B6F087F8C980 /* Pods_FallingWordsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FallingWordsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F4319AB21203A70004DD923 /* GameEndView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameEndView.xib; sourceTree = "<group>"; };
+		4F4319AE21203B17004DD923 /* EndGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndGameViewController.swift; sourceTree = "<group>"; };
+		4F4319B221204419004DD923 /* GameResultProvidable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultProvidable.swift; sourceTree = "<group>"; };
+		4F4319B421204465004DD923 /* GameResultProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameResultProvider.swift; sourceTree = "<group>"; };
 		4F5FB60A211C997900D0D2D4 /* words.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = words.json; sourceTree = "<group>"; };
 		4F8D60C4211CA30100B50829 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		4FF5906F211C314200A084BD /* FallingWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FallingWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FF59072211C314200A084BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4FF59074211C314200A084BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4FF59074211C314200A084BD /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		4FF59077211C314200A084BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4FF59079211C314300A084BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FF5907C211C314300A084BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -154,6 +165,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4F4319AD21203AF8004DD923 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4FF59074211C314200A084BD /* GameViewController.swift */,
+				4F4319AE21203B17004DD923 /* EndGameViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		4F8D60C3211CA29400B50829 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +183,7 @@
 				4FFAAA4C211F3CBE00731D72 /* RoundProvider.swift */,
 				4FFAAA68211F7A5200731D72 /* Game.swift */,
 				4FFAAA6E211F843200731D72 /* ScoreProvider.swift */,
+				4F4319B421204465004DD923 /* GameResultProvider.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,6 +213,7 @@
 		4FF59071211C314200A084BD /* FallingWords */ = {
 			isa = PBXGroup;
 			children = (
+				4F4319AD21203AF8004DD923 /* Controllers */,
 				4FFAAA5F211F6E7700731D72 /* Utilities */,
 				4FFAAA52211F3D5600731D72 /* Protocols */,
 				4FFAAA49211F3C2800731D72 /* DataSource */,
@@ -199,12 +221,12 @@
 				4F8D60C3211CA29400B50829 /* Models */,
 				4F5FB60A211C997900D0D2D4 /* words.json */,
 				4FF59072211C314200A084BD /* AppDelegate.swift */,
-				4FF59074211C314200A084BD /* ViewController.swift */,
 				4FF59076211C314200A084BD /* Main.storyboard */,
 				4FF59079211C314300A084BD /* Assets.xcassets */,
 				4FF5907B211C314300A084BD /* LaunchScreen.storyboard */,
 				4FF5907E211C314300A084BD /* Info.plist */,
 				4FFAAA77211F94FD00731D72 /* GameInitializer.swift */,
+				4F4319AB21203A70004DD923 /* GameEndView.xib */,
 			);
 			path = FallingWords;
 			sourceTree = "<group>";
@@ -256,6 +278,7 @@
 				4FFAAA4E211F3CF600731D72 /* RoundCreatable.swift */,
 				4FFAAA74211F8B1600731D72 /* ScoreProvidable.swift */,
 				4FFAAA7A211F956900731D72 /* GameCreatable.swift */,
+				4F4319B221204419004DD923 /* GameResultProvidable.swift */,
 			);
 			name = Protocols;
 			path = "New Group";
@@ -392,6 +415,7 @@
 			files = (
 				4FF5907D211C314300A084BD /* LaunchScreen.storyboard in Resources */,
 				4F5FB60B211C997900D0D2D4 /* words.json in Resources */,
+				4F4319AC21203A70004DD923 /* GameEndView.xib in Resources */,
 				4FF5907A211C314300A084BD /* Assets.xcassets in Resources */,
 				4FF59078211C314200A084BD /* Main.storyboard in Resources */,
 			);
@@ -494,7 +518,7 @@
 			files = (
 				4FFAAA5B211F698600731D72 /* WordParser.swift in Sources */,
 				4FFAAA6F211F843200731D72 /* ScoreProvider.swift in Sources */,
-				4FF59075211C314200A084BD /* ViewController.swift in Sources */,
+				4FF59075211C314200A084BD /* GameViewController.swift in Sources */,
 				4FFAAA61211F6E9B00731D72 /* NotificationKeysEnum.swift in Sources */,
 				4FFAAA75211F8B1600731D72 /* ScoreProvidable.swift in Sources */,
 				4FFAAA4D211F3CBE00731D72 /* RoundProvider.swift in Sources */,
@@ -503,8 +527,11 @@
 				4FFAAA41211F2CE800731D72 /* Round.swift in Sources */,
 				4FFAAA3C211F2C5A00731D72 /* Button+FontIcon.swift in Sources */,
 				4F8D60C5211CA30100B50829 /* Word.swift in Sources */,
+				4F4319B521204465004DD923 /* GameResultProvider.swift in Sources */,
 				4FFAAA7B211F956900731D72 /* GameCreatable.swift in Sources */,
 				4FFAAA69211F7A5200731D72 /* Game.swift in Sources */,
+				4F4319AF21203B17004DD923 /* EndGameViewController.swift in Sources */,
+				4F4319B321204419004DD923 /* GameResultProvidable.swift in Sources */,
 				4FFAAA78211F94FD00731D72 /* GameInitializer.swift in Sources */,
 				4FFAAA38211F2C3B00731D72 /* Player.swift in Sources */,
 				4FFAAA47211F3C1500731D72 /* Notification+Name.swift in Sources */,
@@ -518,11 +545,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FFAAA64211F726400731D72 /* RoundCreatable.swift in Sources */,
+				4F4319B8212050AD004DD923 /* WordsSampleRetriever.swift in Sources */,
 				4FFAAA43211F2D9400731D72 /* RoundTests.swift in Sources */,
 				4FFAAA6A211F7A5200731D72 /* Game.swift in Sources */,
+				4F4319B721205043004DD923 /* GameResultProvider.swift in Sources */,
 				4FFAAA5E211F6A6100731D72 /* GenerateWordCollection.swift in Sources */,
 				4FFAAA76211F8B1600731D72 /* ScoreProvidable.swift in Sources */,
 				4FFAAA65211F727700731D72 /* Player.swift in Sources */,
+				4F4319B621205040004DD923 /* GameResultProvidable.swift in Sources */,
 				4FFAAA6D211F7FA900731D72 /* GameTests.swift in Sources */,
 				4FFAA9A0211F186900731D72 /* WordTests.swift in Sources */,
 				4FFAAA73211F86DD00731D72 /* ScoreProviderTests.swift in Sources */,

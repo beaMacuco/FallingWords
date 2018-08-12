@@ -14,16 +14,19 @@ class Game {
     
     private let player: Player
     private let roundCreatable: RoundCreatable
+    private let gameResultProvidable: GameResultProvidable
     private let amountOfRounds: Int
     private var roundCount = 1
     private var currentRound: Round?
     
     init(amountOfRounds: Int,
          player: Player,
-         roundCreatable: RoundCreatable) {
+         roundCreatable: RoundCreatable,
+         gameResultProvidable: GameResultProvidable) {
         
         self.player = player
         self.roundCreatable = roundCreatable
+        self.gameResultProvidable = gameResultProvidable
         self.amountOfRounds = amountOfRounds
         
         addObservers()
@@ -55,12 +58,17 @@ class Game {
     }
     
     @objc private func roundIsOver(notification: Notification){
+        updateRoundCount()
         setupNextRound()
+    }
+    
+    private func updateRoundCount(){
+        roundCount = roundCount + 1
     }
     
     private func setupNextRound() {
         if(!gameIsOver()){
-            currentRound = roundCreatable.createRound()
+            currentRound = roundCreatable.createRound(roundCount: roundCount)
         } else {
             notifyGameIsOver()
         }
@@ -71,10 +79,11 @@ class Game {
     }
     
     private func notifyGameIsOver(){
-        NotificationCenter.default.post(name:.gameIsOver, object: nil)
+        let resultMessage = gameResultProvidable.getGameResult(totalScore: player.score, amountOrRounds: amountOfRounds)
+        NotificationCenter.default.post(name:.gameIsOver, object: nil, userInfo: [NotificationKeys.resultMessageKey: resultMessage])
     }
     
     func handlePlayerChoiceForRound(chosenTranslation: Bool) {
-        currentRound?.handlePlayerChoice(chosenTranslation: chosenTranslation)
+        currentRound!.handlePlayerChoice(chosenTranslation: chosenTranslation)
     }
 }

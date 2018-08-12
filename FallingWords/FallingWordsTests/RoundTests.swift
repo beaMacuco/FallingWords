@@ -17,7 +17,7 @@ class RoundTest: XCTestCase {
 
     private func testRoundStartsWhenClassInitialized() {
         expectation(forNotification: .roundStarted, object: nil, handler: nil)
-        let _ = Round(possibleTranslation: word, isTranslation: true, roundDuration: 2)
+        let _ = Round(possibleTranslation: word, isTranslation: true, roundDuration: 2, scoreProvidable: ScoreProvider())
         waitForExpectations(timeout: 0.5, handler: nil)
     }
     
@@ -31,13 +31,13 @@ class RoundTest: XCTestCase {
             return result == expected
         })
         
-        let _ = Round(possibleTranslation: word, isTranslation: true, roundDuration: roundDuration)
+        let _ = Round(possibleTranslation: word, isTranslation: true, roundDuration: roundDuration, scoreProvidable: ScoreProvider())
         waitForExpectations(timeout: 1.5, handler: nil)
     }
     
     private func testRoundIsOver() {
         expectation(forNotification: .roundOver, object: nil, handler: nil)
-        let _ = Round(possibleTranslation: word, isTranslation: true, roundDuration: 2)
+        let _ = Round(possibleTranslation: word, isTranslation: true, roundDuration: 2, scoreProvidable: ScoreProvider())
         waitForExpectations(timeout: 2, handler: nil)
     }
     

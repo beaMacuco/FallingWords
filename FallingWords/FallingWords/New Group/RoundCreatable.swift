@@ -9,5 +9,5 @@
 import Foundation
 
 protocol RoundCreatable {
-    func createRound() -> Round
+    func createRound(roundCount: Int) -> Round
 }

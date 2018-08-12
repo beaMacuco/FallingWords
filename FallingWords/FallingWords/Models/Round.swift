@@ -13,7 +13,7 @@ class Round {
     private let roundDuration: Int
     private var countDown: Int
     private let scoreProvidable: ScoreProvidable
-    private var timer = Timer()
+    private var timer : Timer = Timer()
     
     let possibleTranslation: Word
     let isTranslation: Bool
@@ -33,6 +33,7 @@ class Round {
     }
     
     private func startRound(){
+        postCurrentWord()
         notifyRoundStart()
         runTimer()
     }
@@ -51,12 +52,15 @@ class Round {
                                      selector: #selector(updateRoundStatus),
                                      userInfo: nil,
                                      repeats: true)
-        
     }
     
     @objc private func updateRoundStatus(){
         updateRoundTime()
-        countDownIsOver() ? endRound() : notifyCurrentCountDown()
+        notifyCurrentCountDown()
+        
+        if countDownIsOver() {
+            endRound()
+        }
     }
     
     private func updateRoundTime(){
@@ -77,21 +81,24 @@ class Round {
     
     private func endRound(){
         notifyRoundIsOver()
-        resetRound()
-    }
-    
-    private func resetRound(){
-        timer.invalidate()
-        countDown = roundDuration
-    }
-
-    func handlePlayerChoice(chosenTranslation: Bool) {
-        let correctChoice = scoreProvidable.shouldAddPoint(isTranslation: isTranslation, choseIsTranslation: chosenTranslation)
-        notifyPlayerResult(correctChoice: correctChoice)
-        notifyRoundIsOver()
+        stopTimer()
     }
     
     private func notifyPlayerResult(correctChoice: Bool) {
         NotificationCenter.default.post(name: .playerResult, object: nil, userInfo: [NotificationKeys.resultKey: correctChoice])
+    }
+    
+    private func removeObservers() {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
+    private func stopTimer(){
+        timer.invalidate()
+    }
+    
+    func handlePlayerChoice(chosenTranslation: Bool) {
+        let correctChoice = scoreProvidable.shouldAddPoint(isTranslation: isTranslation, choseIsTranslation: chosenTranslation)
+        notifyPlayerResult(correctChoice: correctChoice)
+        endRound()
     }
 }
