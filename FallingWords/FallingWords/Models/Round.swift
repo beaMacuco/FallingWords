@@ -80,8 +80,8 @@ class Round {
     }
     
     private func endRound(){
-        notifyRoundIsOver()
         stopTimer()
+        notifyRoundIsOver()
     }
     
     private func notifyPlayerResult(correctChoice: Bool) {

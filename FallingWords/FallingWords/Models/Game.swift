@@ -28,7 +28,7 @@ class Game {
         self.roundCreatable = roundCreatable
         self.gameResultProvidable = gameResultProvidable
         self.amountOfRounds = amountOfRounds
-        
+
         addObservers()
         setupNextRound()
     }

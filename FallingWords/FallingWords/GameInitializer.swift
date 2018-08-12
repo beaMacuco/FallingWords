@@ -10,8 +10,8 @@ import Foundation
 
 class GameInitializer : GameCreatable {
     
-    private let amountOfRounds = 4
-    private let roundDuration = 10
+    private let amountOfRounds = 5
+    private let roundDuration = 20
     
     func createGame(result: @escaping(Game) -> Void){
         let player = Player()

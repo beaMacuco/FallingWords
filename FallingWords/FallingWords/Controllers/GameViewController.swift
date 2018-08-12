@@ -34,14 +34,6 @@ class GameViewController: UIViewController {
         }
     }
     
-    @IBAction func userPressedIncorrectTranslation(_ sender: Any){
-        game?.handlePlayerChoiceForRound(chosenTranslation: false)
-    }
-    
-    @IBAction func userPressedCorrectTranslation(_ sender: Any) {
-        game?.handlePlayerChoiceForRound(chosenTranslation: true)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         addObservers()
@@ -88,14 +80,24 @@ class GameViewController: UIViewController {
     
     @objc private func roundStarted(notification: Notification){
         let duration = notification.userInfo![NotificationKeys.roundDurationKey] as! Int
-        setupCounterText(secondsLeft: duration)
         animateWordVerticallyAcrossScreen(duration: duration)
+        setupCounterText(secondsLeft: duration)
     }
     
     private func setupCounterText(secondsLeft: Int){
         counter.text! = (secondsLeft >= 10) ? "\(secondsLeft)" : "0\(secondsLeft)"
     }
     
+    @IBAction func userPressedIncorrectTranslation(_ sender: Any){
+        translation.layer.removeAllAnimations()
+        game?.handlePlayerChoiceForRound(chosenTranslation: false)
+    }
+    
+    @IBAction func userPressedCorrectTranslation(_ sender: Any) {
+        translation.layer.removeAllAnimations()
+        game?.handlePlayerChoiceForRound(chosenTranslation: true)
+    }
+
     private func animateWordVerticallyAcrossScreen(duration: Int){
         let x = view.frame.width/2 - translation.frame.height
         var y : CGFloat = 0
@@ -113,11 +115,11 @@ class GameViewController: UIViewController {
     }
     
     private func fadeInTranslationOptionLabel(){
-        translation.fadeInWithDuration(duration: 1.0)
+        translation.fadeInWithDuration(duration: 0.5)
     }
     
     private func fadeOutTranslationOptionLabel(){
-        translation.fadeOutWithDuration(duration: 1.0)
+        translation.fadeOutWithDuration(duration: 0.5)
     }
     
     @objc private func playerResult(notification: Notification){
