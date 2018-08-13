@@ -86,4 +86,8 @@ class Game {
     func handlePlayerChoiceForRound(chosenTranslation: Bool) {
         currentRound!.handlePlayerChoice(chosenTranslation: chosenTranslation)
     }
+    
+    func onPlayerScoredFeedbackOver(){
+        currentRound!.endRound()
+    }
 }

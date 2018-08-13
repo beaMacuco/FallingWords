@@ -79,7 +79,7 @@ class Round {
         NotificationCenter.default.post(name: .countDown, object: nil, userInfo: [NotificationKeys.secondsLeftKey : countDown])
     }
     
-    private func endRound(){
+    func endRound(){
         stopTimer()
         notifyRoundIsOver()
     }
@@ -99,6 +99,5 @@ class Round {
     func handlePlayerChoice(chosenTranslation: Bool) {
         let correctChoice = scoreProvidable.shouldAddPoint(isTranslation: isTranslation, choseIsTranslation: chosenTranslation)
         notifyPlayerResult(correctChoice: correctChoice)
-        endRound()
     }
 }

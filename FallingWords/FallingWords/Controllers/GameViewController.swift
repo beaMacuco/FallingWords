@@ -15,7 +15,6 @@ class GameViewController: UIViewController {
     @IBOutlet weak var word: UILabel!
     @IBOutlet weak var counter: UILabel!
     @IBOutlet weak var roundResultMessage: UILabel!
-    
     @IBOutlet weak var incorrectTranslationButton: UIButton! {
         didSet {
             incorrectTranslationButton.setTitleWithFontIcon(icon: .timesCircle, size: 60)
@@ -43,6 +42,7 @@ class GameViewController: UIViewController {
         super.viewWillAppear(animated)
         createGame()
     }
+    
     private func createGame(){
         let initializer = GameInitializer()
         initializer.createGame { (game) in
@@ -99,11 +99,11 @@ class GameViewController: UIViewController {
     }
 
     private func animateWordVerticallyAcrossScreen(duration: Int){
-        let x = view.frame.width/2 - translation.frame.height
+        let x : CGFloat = 10
         var y : CGFloat = 0
-        let width = translation.frame.width
+        let width = view.frame.width - 20
         let height = translation.frame.height
-        
+
         translation.frame = CGRect(x: x, y: y, width: width, height: height)
         
         fadeInTranslationOptionLabel()
@@ -131,7 +131,8 @@ class GameViewController: UIViewController {
         roundResultMessage.text = result ? "🎉" : "😬"
         roundResultMessage.isHidden = false
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            self.game?.onPlayerScoredFeedbackOver()
             self.roundResultMessage.isHidden = true
         }
     }
