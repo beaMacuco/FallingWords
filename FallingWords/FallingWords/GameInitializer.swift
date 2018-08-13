@@ -14,15 +14,14 @@ class GameInitializer : GameCreatable {
     private let roundDuration = 20
     
     func createGame(result: @escaping(Game) -> Void){
-        let player = Player()
         let wordRetriever = WordsSampleRetriever()
         
         wordRetriever.fetchItems { (words) in
             let roundProvider = RoundProvider(words: words, amountOfRounds:self.amountOfRounds, roundDuration: self.roundDuration, scoreProvidable: ScoreProvider())
             
             let game = Game(amountOfRounds: self.amountOfRounds,
-                            player: player,
-                            roundCreatable: roundProvider, gameResultProvidable: GameResultProvider())
+                            roundCreatable: roundProvider,
+                            gameResultProvidable: GameResultProvider())
             
             result(game)
         }

@@ -12,7 +12,7 @@ import Foundation
 
 class Game {
     
-    private let player: Player
+    private let player = Player()
     private let roundCreatable: RoundCreatable
     private let gameResultProvidable: GameResultProvidable
     private let amountOfRounds: Int
@@ -20,11 +20,9 @@ class Game {
     private var currentRound: Round?
     
     init(amountOfRounds: Int,
-         player: Player,
          roundCreatable: RoundCreatable,
          gameResultProvidable: GameResultProvidable) {
         
-        self.player = player
         self.roundCreatable = roundCreatable
         self.gameResultProvidable = gameResultProvidable
         self.amountOfRounds = amountOfRounds
