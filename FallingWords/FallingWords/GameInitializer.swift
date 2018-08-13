@@ -17,7 +17,10 @@ class GameInitializer : GameCreatable {
         let wordRetriever = WordsSampleRetriever()
         
         wordRetriever.fetchItems { (words) in
-            let roundProvider = RoundProvider(words: words, amountOfRounds:self.amountOfRounds, roundDuration: self.roundDuration, scoreProvidable: ScoreProvider())
+            let roundProvider = RoundProvider(words: words,
+                                              amountOfRounds:self.amountOfRounds,
+                                              roundDuration: self.roundDuration,
+                                              scoreProvidable: ScoreProvider())
             
             let game = Game(amountOfRounds: self.amountOfRounds,
                             roundCreatable: roundProvider,
