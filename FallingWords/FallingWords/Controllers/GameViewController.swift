@@ -30,6 +30,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var translation: UILabel! {
         didSet {
             translation.alpha = 0
+            translation.sizeToFit()
         }
     }
     

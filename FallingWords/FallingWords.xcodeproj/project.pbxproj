@@ -768,8 +768,8 @@
 			baseConfigurationReference = C85EB01D401A55E5A462A844 /* Pods-FallingWordsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JJ2B66P767;
 				INFOPLIST_FILE = FallingWordsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -789,8 +789,8 @@
 			baseConfigurationReference = 0082284EC2018A9EED24EA1E /* Pods-FallingWordsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JJ2B66P767;
 				INFOPLIST_FILE = FallingWordsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
